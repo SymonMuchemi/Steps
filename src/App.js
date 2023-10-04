@@ -8,7 +8,7 @@ const messages = [
 
 
 function App() {
-	let [step, setStep] = useState(1);
+	const [step, setStep] = useState(1);
 
 	function handlePrevious(){
 		step > 1 && setStep(step -= 1)
