@@ -10,6 +10,7 @@ const messages = [
 
 function App() {
 	let [step, setStep] = useState(1);
+	let [isOpen, setIsOpen] = useState(true);
 
 	function handlePrevious(){
 		step > 1 && setStep(step -= 1)
@@ -21,12 +22,23 @@ function App() {
 
 	}
 
+
 	return (
-		<Steps step={step}
-				handleNext={handleNext}
-				handlePrevious={handlePrevious}
-				messages={messages}
-				 />
+		<>
+			<button className="close"
+					onClick={() => setIsOpen(!isOpen)}
+			>&times;</button>
+
+			{
+				isOpen && (
+					<Steps step={step}
+					handleNext={handleNext}
+					handlePrevious={handlePrevious}
+					messages={messages} />
+				)
+			}
+			
+		</>
 	)
 }
 
