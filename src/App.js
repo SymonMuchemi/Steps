@@ -8,13 +8,15 @@ const messages = [
 
 
 function App() {
-	const [step, setStep] = useState(1);
+	let [step, setStep] = useState(1);
 
 	function handlePrevious(){
+		setStep(step -= 1);
 
 	}
 
 	function handleNext(){
+		setStep(step += 1);
 
 	}
 
@@ -33,14 +35,15 @@ function App() {
 					style={{
 						backgroundColor: '#7950f2',
 						color: "#FFF"
-					}} 
+					}}
+					onClick={handlePrevious}
 					>Previous</button>
 				<button
 					style={{
 						backgroundColor: '#7950f2',
 						color: "#FFF"
 					}}
-					onClick={() => (step += 1)}
+					onClick={handleNext}
 				>Next</button>
 			</div>
 		</div>
