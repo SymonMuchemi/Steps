@@ -12,17 +12,18 @@ function App() {
 	let [step, setStep] = useState(1);
 	let [isOpen, setIsOpen] = useState(true);
 
+	// using a callback function to set the state
 	function handlePrevious(){
 		step > 1 && setStep((s) => s - 1);
 
 	}
 
+	// calling setStep twice to skip a step
 	function handleNext(){
 		if (step < messages.length){
 			setStep((s) => s + 1);
 			setStep((s) => s + 1);
 		}
-
 	}
 
 	return (
