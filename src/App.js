@@ -13,15 +13,17 @@ function App() {
 	let [isOpen, setIsOpen] = useState(true);
 
 	function handlePrevious(){
-		step > 1 && setStep(step -= 1)
+		step > 1 && setStep((s) => s - 1);
 
 	}
 
 	function handleNext(){
-		step < 3 && setStep(step += 1);
+		if (step < messages.length){
+			setStep((s) => s + 1);
+			setStep((s) => s + 1);
+		}
 
 	}
-
 
 	return (
 		<>
