@@ -22,8 +22,8 @@ function App() {
 	function handleNext(){
 		if (step < messages.length){
 			setStep((s) => s + 1);
-			setStep((s) => s + 1);
-		}
+			// setStep((s) => s + 1);
+		} 
 	}
 
 	return (

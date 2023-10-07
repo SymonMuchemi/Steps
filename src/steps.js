@@ -8,7 +8,8 @@ export default function Steps({step, handlePrevious, handleNext, messages}){
 				<div className={step >= 3 ? 'active' : ''}>3</div>
 			</div>
 			
-			<p className="message">Step {step}: {messages[step - 1]} </p>
+			<p className="message">
+				Step {step}: {messages[step - 1]} </p>
 
 			<div className="buttons">
 				<button
